@@ -1,0 +1,31 @@
+---
+title: Testing Map()s in global /_data/ files
+---
+
+<h1>{{ title }}</h1>
+
+<hr/>
+
+<h2>1. Fetching a specific key from a global <code>Map()</code></h2>
+<p>{{ map.get('two') | safe }}</p>
+
+<h2>2. Looping over a global data file <code>Map()</code> by key/value pair</h2>
+<ul>
+  {%- for key, value in map %}
+  <li>key={{ key | safe }}, value={{ value | safe }}</li>
+  {%- endfor %}
+</ul>
+
+<h2>3. Looping over a global data file <code>Map()</code> keys</h2>
+<ul>
+  {% for key in map.keys() %}
+  <li>{{ key | safe }}</li>
+  {% endfor %}
+</ul>
+
+<h2>4. Looping over a global data file <code>Map()</code> values</h2>
+<ul>
+  {% for value in map.values() %}
+  <li>{{ value | safe }}</li>
+  {% endfor %}
+</ul>

@@ -1,0 +1,31 @@
+---
+title: Testing Map()s in a collection
+---
+
+<h1>{{ title }}</h1>
+
+<hr/>
+
+<h2>1. Fetching a specific key from a <code>Map()</code></h2>
+<p>{{ collections.mapcollection.get('three') | safe }}</p>
+
+<h2>2. Looping over a collection <code>Map()</code> by key/value</h2>
+<ul>
+  {%- for key, value in collections.mapcollection %}
+  <li>key={{ key | safe }}, value={{ value | safe }}</li>
+  {%- endfor %}
+</ul>
+
+<h2>3. Looping over a collection <code>Map()</code> keys</h2>
+<ul>
+  {% for key in collections.mapcollection.keys() %}
+  <li>{{ key | safe }}</li>
+  {% endfor %}
+</ul>
+
+<h2>4. Looping over a collection <code>Map()</code> values</h2>
+<ul>
+  {% for value in collections.mapcollection.values() %}
+  <li>{{ value | safe }}</li>
+  {% endfor %}
+</ul>
