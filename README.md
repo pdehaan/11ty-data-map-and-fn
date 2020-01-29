@@ -2,7 +2,7 @@
 
 This example shows how you can use JavaScript `Map()` object as a datasource.
 
-The ./_data/map.js file exports a <code>Map()</code> object with two key/value pairs:
+The [./_data/map.js](_data/map.js) file exports a <code>Map()</code> object with two key/value pairs:
 
 ```js
 module.exports = new Map([
@@ -11,7 +11,7 @@ module.exports = new Map([
 ]);
 ```
 
-The ./map-data-test.njk file has the following snippets:
+The [./map-data-test.njk](map-data-test.njk) file has the following snippets:
 
 ## Example 1: Fetching a specific key from a global `Map()`
 
@@ -85,7 +85,7 @@ The ./map-data-test.njk file has the following snippets:
 
 ---
 
-The code in ./map-collection-test.njk is the same, except instead of using the ./_data/map.js global data file, we use the `mapcollection` collection defined in the .eleventy.js file:
+The code in [./map-collection-test.njk](map-collection-test.njk) is the same, except instead of using the [./_data/map.js](_data/map.js) global data file, we use the `mapcollection` collection defined in the [.eleventy.js](.eleventy.js) file:
 
 ```js
 module.exports = (eleventyConfig) => {
@@ -112,11 +112,11 @@ module.exports = (eleventyConfig) => {
 <p>String number three</p>
 ```
 
-The rest of the examples are the same as their ./map-data-test.njk counterpart, with the exception of using `collections.mapcollection.*` instead of the ./_data/ file's `map.*`.
+The rest of the examples are the same as their [./map-data-test.njk](map-data-test.njk) counterpart, with the exception of using `collections.mapcollection.*` instead of the ./_data/ file's `map.*`.
 
 ---
 
-Finally we have the ./_data/fn.js global data file which exports an object with a function which returns a string:
+Finally we have the [./_data/fn.js](_data/fn.js) global data file which exports an object with a function which returns a string:
 
 ```js
 module.exports = {
@@ -126,7 +126,7 @@ module.exports = {
 };
 ```
 
-Our ./fn-test.njk file calls the `fn.js` data file's `log()` method and outputs the result:
+Our [./fn-test.njk](fn-test.njk) file calls the [./_data/fn.js](_data/fn.js) data file's `log()` method and outputs the result:
 
 ```njk
 <p><code>fn.log(12)</code>: {{ fn.log(12) | dump(2) }}</p>
